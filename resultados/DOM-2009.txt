@@ -1,9 +1,0 @@
-
-    
-                    Personas que usan Internet (% de la población)
-    ***********************************************
-    Nombre: República Dominicana 
-    Codigo: DOM
-    Anio:   2009
-    Valor:  27.72
-    

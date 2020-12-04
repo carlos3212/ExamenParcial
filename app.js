@@ -1,7 +1,4 @@
-#!/usr/bin/env node
-
 const colors = require('colors');
-
 const { argv } = require('./config/yargs');
 const file = require('./buscador/ciudad');
 const { find, save } = require('./buscador/buscar');
