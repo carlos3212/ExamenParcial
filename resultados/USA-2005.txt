@@ -1,0 +1,9 @@
+
+    
+                    Personas que usan Internet (% de la población)
+    ***********************************************
+    Nombre: Estados Unidos 
+    Codigo: USA
+    Anio:   2005
+    Valor:  67.96805292
+    
