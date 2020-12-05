@@ -1,3 +1,4 @@
+//comandos
 let options = {
     archivo: {
         require: true,

@@ -1,8 +1,8 @@
+//exportamos
 const validCountries = require('./cod.json');
-
 const csvtojson = require('csvtojson');
 const { promises: fs } = require('fs');
-
+//lectura csv
 const importData = async (file) => {
     const csvFile = await fs.readFile(file, 'utf-8')
         .catch(err => { throw new Error('Error no existe el archivo.') })
@@ -22,7 +22,7 @@ const importData = async (file) => {
 
     csvData = csvData.filter(record => {
         if (isValid(record['Country Code'])) {
-            // delete record['Indicator Name']
+            delete record['Indicator Name']
             delete record['Indicator Code']
             delete record['field65']
             return record
@@ -32,16 +32,16 @@ const importData = async (file) => {
     return csvData;
 }
 
-
+// validaciones
 const isValid = (countryCode) => {
     const validCodes = validCountries.code;
     let valid = validCodes.includes(countryCode);
     return valid;
 }
 
-const valAno = (country, year) => {
+const valAnio = (country, year) => {
     if (isNaN(year)) {
-        throw new Error('El dato es  incorrecto ingrese numeros.')
+        throw new Error('El dato es incorrecto ingrese numeros y dentro del rango 1960 - 2019    .')
     }
     let validYears = Object.keys(country)
     validYears = validYears.map(year => +year)
@@ -49,9 +49,9 @@ const valAno = (country, year) => {
 
     return validYears.includes(year)
 }
-
+//Exportar modulos
 module.exports = {
     importData,
     isValid,
-    valAno
+    valAnio
 }

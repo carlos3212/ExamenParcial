@@ -1,8 +1,9 @@
+//extraer
 const colors = require('colors');
 const { argv } = require('./config/yargs');
 const file = require('./buscador/ciudad');
 const { find, save } = require('./buscador/buscar');
-
+//Variables
 
 let command = argv._[0];
 let path = argv.archivo
@@ -14,7 +15,7 @@ file.importData(path)
         switch (command) {
             case 'mostrar':
                 let myData = find(data, country, year)
-                console.log(`           ${myData.title}          `.bgGreen)
+                console.log(`Personas que usan Internet (% de la población)         `.bgGreen)
                 console.log('****************************************'.green)
                 console.log('Nombre: '.cyan,(myData.name))
                 console.log('Codigo: '.cyan,(myData.code).green)

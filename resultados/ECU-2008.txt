@@ -1,0 +1,10 @@
+
+    
+    Personas que usan Internet (% de la población)  
+    ***********************************************
+    Nombre: Ecuador 
+    Codigo: ECU
+    Anio:   2008
+    Valor:  18.8
+    ***********************************************
+    
